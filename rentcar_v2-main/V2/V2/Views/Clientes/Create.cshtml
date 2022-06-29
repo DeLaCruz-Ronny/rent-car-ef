@@ -1,0 +1,24 @@
+﻿@model V2.Models.Cliente
+@{
+    ViewData["Title"] = "Create";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="row mt-5">
+    <div class="col-sm-4">
+        <form asp-action="Create" asp-controller="Clientes" method="post">
+            <div class="mb-2">
+                <label class="form-label" asp-for="IdCliente">Nombre</label>
+                <input class="form-control form-control-sm" asp-for="Nombre" type="text" />
+            </div>
+
+            <div class="mb-2">
+                <label class="form-label" asp-for="IdCliente">Telefono</label>
+                <input class="form-control form-control-sm" asp-for="Telefono" type="text" />
+            </div>
+
+            <button class="btn btn-primary btn-sm" type="submit">Crear</button>
+        </form>
+    </div>
+</div>
+

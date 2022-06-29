@@ -1,0 +1,20 @@
+﻿@model V2.Models.Marca
+@{
+    ViewData["Title"] = "Delete";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+<div class="row mt-5">
+    <div class="col-sm-4">
+        <form asp-action="Delete" asp-controller="Marca" method="post">
+            <input type="hidden" asp-for="IdMarca" />
+            <div class="mb-2">
+                <label class="form-label" asp-for="IdMarca">Nombre</label>
+                <input class="form-control form-control-sm" asp-for="Descripcion" type="text" readonly />
+            </div>
+
+            <button class="btn btn-danger btn-sm" type="submit">Eliminar</button>
+        </form>
+    </div>
+</div>

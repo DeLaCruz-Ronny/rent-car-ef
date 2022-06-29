@@ -1,0 +1,25 @@
+﻿@model V2.Models.Cliente
+@{
+    ViewData["Title"] = "Delete";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+<div class="row mt-5">
+    <div class="col-sm-4">
+        <form asp-action="Delete" asp-controller="Clientes" method="post">
+            <input type="hidden" asp-for="IdCliente" />
+            <div class="mb-2">
+                <label class="form-label" asp-for="IdCliente">Nombre</label>
+                <input class="form-control form-control-sm" asp-for="Nombre" type="text" readonly />
+            </div>
+
+            <div class="mb-2">
+                <label class="form-label" asp-for="IdCliente">Telefono</label>
+                <input class="form-control form-control-sm" asp-for="Telefono" type="text" readonly />
+            </div>
+
+            <button class="btn btn-danger btn-sm" type="submit">Eliminar</button>
+        </form>
+    </div>
+</div>

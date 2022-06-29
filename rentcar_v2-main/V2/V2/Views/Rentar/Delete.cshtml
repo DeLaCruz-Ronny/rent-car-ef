@@ -1,0 +1,46 @@
+﻿@model V2.Models.Rentar
+@{
+    ViewData["Title"] = "Delete";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+<div class="row mt-5">
+    <div class="col-sm-4">
+        <form asp-action="Delete" asp-controller="Rentar" method="post">
+             <input type="hidden" asp-for="IdRentar" />
+            <div class="mb-2">
+                <label class="form-label" asp-for="IdCliente">Cliente</label>
+                <input class="form-control form-control-sm" asp-for="oCliente.Nombre" type="text" readonly/>
+            </div>
+
+            <div class="mb-2">
+                <label class="form-label" asp-for="IdMarca">Marca</label>
+                <input class="form-control form-control-sm" asp-for="oMarca.Descripcion" type="text" readonly/>
+            </div>
+
+            <div class="mb-2">
+                <label class="form-label" asp-for="IdModelo">Modelo</label>
+                 <input class="form-control form-control-sm" asp-for="oModelo.Descripcion" type="text" readonly/>
+            </div>
+
+            <div class="mb-2">
+                <label class="form-label" asp-for="IdCategoria">Categoria</label>
+                 <input class="form-control form-control-sm" asp-for="oMarca.Descripcion" type="text" readonly/>
+            </div>
+            
+            @*<div class="mb-2">
+                <label class="form-label" asp-for="oRentar.FechaRentado">Fecha de Salida</label>
+                <input class="form-control form-control-sm" asp-for="oRentar.FechaRentado" type="date" readonly/>
+            </div>*@
+
+            <div class="mb-2">
+                <label class="form-label" asp-for="IdRentar">Fecha de Retorno</label>
+                <input class="form-control form-control-sm" asp-for="FechaRetorno" type="date" disabled />
+            </div>
+
+
+            <button class="btn btn-danger btn-sm" type="submit">Eliminar</button>
+        </form>
+    </div>
+</div>

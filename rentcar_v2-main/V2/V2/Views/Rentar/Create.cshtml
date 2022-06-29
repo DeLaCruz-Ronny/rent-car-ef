@@ -1,0 +1,53 @@
+﻿@model V2.Models.ViewModels.RentarVM
+@{
+    ViewData["Title"] = "Create";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+<div class="row mt-5">
+    <div class="col-sm-4">
+        <form asp-action="Create" asp-controller="Rentar" method="post">
+            <div class="mb-2">
+                <label class="form-label" asp-for="oRentar.IdCliente">Cliente</label>
+                <select class="form-select" asp-for="oRentar.IdCliente" asp-items="@Model.oListaCliente">
+                    <option selected>---Seleccionar---</option>
+                </select>
+            </div>
+
+            <div class="mb-2">
+                <label class="form-label" asp-for="oRentar.IdMarca">Marca</label>
+                <select class="form-select" asp-for="oRentar.IdMarca" asp-items="@Model.oListaMarca">
+                    <option selected>---Seleccionar---</option>
+                </select>
+            </div>
+
+            <div class="mb-2">
+                <label class="form-label" asp-for="oRentar.IdModelo">Modelo</label>
+                <select class="form-select" asp-for="oRentar.IdModelo" asp-items="@Model.oListaModelo">
+                    <option selected>---Seleccionar---</option>
+                </select>
+            </div>
+
+            <div class="mb-2">
+                <label class="form-label" asp-for="oRentar.IdCategoria">Categoria</label>
+                <select class="form-select" asp-for="oRentar.IdCategoria" asp-items="@Model.oListaCategoria">
+                    <option selected>---Seleccionar---</option>
+                </select>
+            </div>
+            
+            @*<div class="mb-2">
+                <label class="form-label" asp-for="oRentar.FechaRentado">Fecha de Salida</label>
+                <input class="form-control form-control-sm" asp-for="oRentar.FechaRentado" type="date" readonly/>
+            </div>*@
+
+            <div class="mb-2">
+                <label class="form-label" asp-for="oRentar.FechaRetorno">Fecha de Retorno</label>
+                <input class="form-control form-control-sm" asp-for="oRentar.FechaRetorno" type="date" />
+            </div>
+
+
+            <button class="btn btn-primary btn-sm" type="submit">Crear</button>
+        </form>
+    </div>
+</div>
